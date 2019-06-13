@@ -2,14 +2,67 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
-		<script src="https://google.github.io/traceur-compiler/bin/BrowserSystem.js"></script>
-		<script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
 		<title></title>
 	</head>
 	<body>
 	<script type="module">
-		import './js/es6.js';
+		window.onload = function(){
+			/*暂时性死区*/
+			/*var temp = "123"
+			if(true){
+				temp = '156';
+				console.log('temp',temp);
+				console.log('typeof temp',typeof temp);
+				let temp ;
+			}*/
+			/*function bar(x = 2, y = x) {
+				console.log('x+y',x+y);
+				return [x, y];
+			}
+			bar();*/
+
+			/*var a = '10';
+			(function(){
+                a = '666'
+                console.log('立即执行');
+            })();*/
+			/*function test(){
+				a = '123'
+				console.log('执行');
+			}
+			test();*/
+			// console.log('a',a);
+
+			/*function f() { console.log('I am outside!'); }
+
+			(function () {
+				if (false) {
+					// 重复声明一次函数f
+					function f() { console.log('I am inside!'); }
+				}
+
+				f();
+			}());*/
+
+			/*function f() { console.log('I am outside!'); }
+
+			(function () {
+				if (false) {
+					// 重复声明一次函数f
+					function f() { console.log('I am inside!'); }
+				}
+
+				f();
+			}());*/
+			/*var obj = {
+				p1:'',
+				p2:''
+			};
+			with (obj) {
+				p1 = 4;
+				p2 = 5;
+			}*/
+		}
 	</script>
 	</body>
 </html>

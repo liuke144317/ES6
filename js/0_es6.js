@@ -76,6 +76,7 @@ f();*/
 console.log('aa',a)*/
 
 // slice与splice比较
+/*
 var aa = [1,2,3,4,5,6,7,8,9]
 var bb = ['aa','bb']
 aa.splice(1,2,bb)
@@ -83,3 +84,66 @@ var s = '\u00A9';
 // console.log('aa',aa.slice(0,5));
 console.log('aa',aa);
 console.log('s',s);
+*/
+/*var obj = {
+    p1:'',
+    p2:''
+};
+with (obj) {
+    p1 = 4;
+    p2 = 5;
+}*/
+/*console.log('obj.p1',obj.p1);
+console.log('p1',p1);*/
+
+/*var obj = {
+    a1:'123',
+    a2:''
+}
+var objj = {};
+console.log('a1',obj.a1);
+console.log('a1',obj['a1']);
+console.log('Object.keys',Object.keys(obj));
+delete obj.a1;
+objj = obj;
+console.log('Object.keys',Object.keys(objj));
+console.log('in','a2' in objj)
+console.log('hasOwnProperty',obj.hasOwnProperty('a2'))*/
+
+/*var a = ({aa:123})
+console.log('a',a.aa);*/
+/*es3保护属性的私有性*/
+/*
+function g(){
+    var obj = {//因为这相当于直接定义的一个常量，实时保存在内存中，违背了构造函数与实例分离的初衷，实例操作的属性，保存在了构造函数当中
+        name:'黄淮'
+    }
+}
+var bb = new g();
+console.log('bb.obj',bb.obj);
+/!*使用立即执行函数来*!/
+var cc = function () {
+    console.log('123');
+}
+*/
+/*proxy代理*/
+let Person = {
+    sex:'male',
+    age:23,
+    name:'poppy'
+}
+let person = new Proxy(Person,{
+    get(target, key) {
+        return target[key]
+    },
+    set(target, key, value) {
+        if(key!=='sex'){
+            target[key] = value;
+        }
+    }
+
+});
+Person.sex = 'female'
+console.log('name:',person.name)
+console.log('sex:',person.sex)
+console.log('age:',person.age)

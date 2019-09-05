@@ -147,3 +147,11 @@ Person.sex = 'female'
 console.log('name:',person.name)
 console.log('sex:',person.sex)
 console.log('age:',person.age)
+
+/*function A(){
+    this.name = '123';
+}
+if(!global.foo){
+    global.foo = new A();
+}
+module.exports = global._foo;*/
